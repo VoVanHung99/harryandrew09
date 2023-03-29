@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<title>JQuery Basic</title>
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="js/jquery-3.6.0.min.js"></script>
+	
+	<style>
+	.box1 {
+		position:relative;
+		left:100px;
+		margin:10px;
+		padding:10px;
+		border: 5px solid red;
+		color: green;
+		width: 200px;
+		height:300px;
+	}
+	.box2 {
+		border: 5px solid blue;
+		color: green;
+		width: 100px;
+		height:100px;
+	}
+	.box3 {
+		margin:auto;
+		border: 5px solid green;
+		color: red;
+	}
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var d1 = $(window).width();
+			$("#d1").text(d1);
+			var d2 = $(window).height(); 
+			$("#d2").text(d2);
+
+			var d3 = $("#div1").width();
+			$("#d3").text(d3);
+			var d4 = $("#div1").height();
+			$("#d4").text(d4);
+
+			var d5 = $('#div1').innerWidth();
+			$("#d5").text(d5);
+			var d6 = $('#div1').innerHeight();
+			$("#d6").text(d6);
+
+			var d7 = $('#div1').outerWidth(false);
+			$("#d7").text(d7);
+			var d8 = $('#div1').outerHeight(false);
+			$("#d8").text(d8);
+
+			var d9 = $('#div1').outerWidth(true);
+			$("#d9").text(d9);
+			var d10 = $('#div1').outerHeight(true);
+			$("#d10").text(d10);
+
+			var d1rsd1 = $(window).width() - $("#div1").width();
+			$("#d11").text(d1rsd1);
+			var d1rsd2 = $(window).height() - $("#div1").height();
+			$("#d12").text(d1rsd2);
+
+			$("#div2").css("width", (1/2)*d1).css("height", (1/3)*d2).toggleClass("box2 box3");
+		});
+	</script>
+
+	</head>
+
+	<body>
+		<table border=1>
+			<tr><td >Window size</td><td id="d1">D1</td><td id="d2">D2</td></tr>
+			<tr><td >Div 1 size</td><td id="d3">D3</td><td id="d4">D4</td></tr>
+			<tr><td >Div 1 inner size</td><td id="d5">D5</td><td id="d6">D6</td></tr>
+			<tr><td >Div 1 outer size 1</td><td id="d7">D7</td><td id="d8">D8</td></tr>
+			<tr><td >Div 1 outer size 2</td><td id="d9">D9</td><td id="d10">D10</td></tr>
+			<tr><td >Div 1 remaining size</td><td id="d11">D11</td><td id="d12">D12</td></tr>
+		</table>
+		<div id="div1" class="box1"> div 1 </div>
+		<div id="div2" class="box2">div 2 </div>
+	</body>
+</html>

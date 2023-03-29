@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Trang Chủ</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon"> 
+        <link rel="stylesheet" type="text/css" href="css/trangchu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/javascript.js" type="text/javascript" charset="utf-8" async defer></script>
+        <script src="js/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
+    </head>
+
+    <body> 
+        <header>
+            <a id="trangchu" href="trangchu.html">
+                <img src="images/logo.png">
+            </a> 
+            <nav class="nav">
+                <a href="trangchu.html">Trang Chủ</a>
+                <a href="gioithieu.html">Giới Thiệu</a>
+                <a href="sanpham.html">Sản Phẩm</a>
+                <a href="tintuc.html">Tin Tức</a>
+                <a href="dangnhap.html">Đăng Nhập</a>
+                <a href="dangky.html">Đăng Ký</a>
+                <a href="lienhe.html">Liên Hệ</a>
+                
+                <div class="fontAwesome">
+                    <form action="timkiem.html" method="get" name="regForm">
+                        <input class="inputAwesome" type="text" placeholder="Nhập nội dung cần tìm..." name="inputContent" onkeypress="return isEnter(event)">
+                        <button type="submit" id="iconAwesome" class="fas fa-search search" onclick="return sentData()"></button>
+                        <button id="iconAwesome" class="fas fa-shopping-cart shoppingCart" onclick="return goToCart()"></button>
+                    </form> 
+
+                </div>
+                
+            </nav>  
+            <div id="divAnimation1">
+                <img class="imgAnimation1" src="images/header-img1.png"/>
+            </div>
+            <div id="divAnimation2">
+                <img class="imgAnimation2" src="images/header-img2.png"/>
+            </div>
+            <div id="divAnimation3">
+                <img class="imgAnimation3" src="images/header-img3.png"/>
+            </div>
+        </header>
+        
+        <main>
+            <article>
+                <div id="FeaturedNews">
+                    <!-- <img width="100%" src="images/trangchu/bg-home.jpg"> -->
+                 </div>
+                <h1>Sản Phẩm Mới</h1>
+                <h2>Sữa Chua Tốt Cho Sức Khỏe</h2>
+                <div class="divLayout1">  
+                    <div class="imgLayout1">
+                        <img src="images/trangchu/yogurt.jpg">
+                    </div>                      
+                    <div class="pLayout1">
+                        <p id="text">Sữa chua là một loại thực phẩm được tạo ra từ quá trình lên men sữa của các vi khuẩn. Hầu hết các loại sữa đều có thể dùng làm sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết. Sữa chua hay còn gọi là yaourt (là da-ua). Chúng được lên men từ sữa động vật nhờ vi khuẩn lactic, đã được khử chất béo và thanh trùng ở nhiệt độ 80 - 90 độ C. Sữa chua có 2 loại cơ bản là sữa chua có đường và sữa chua không đường. Bên cạnh đó còn có loại sữa chua uống, sữa chua lên men sống. Váng sữa thường được chia làm 3 loại dựa vào hàm lượng chất béo có trong sản phẩm: váng sữa có hàm lượng chất béo cao nhất (35-50% chất béo), váng sữa thông thường (10-30% chất béo), váng sữa nguyên kem (6-15% chất béo). <a href="#">Xem chi tiết</a></p>
+                    </div>        
+                </div>
+
+                <h1>Góc Thành Viên</h1>
+                <h2>Sữa Chua Làm Nhà</h2>
+                <div class="divLayout2">
+                    <div class="pLayout2">
+                        <p id="text">Học làm sữa chua tại nhà cùng chuyên gia. Trong thực đơn dinh dưỡng của các bà mẹ cho con trẻ và các thành viên trong gia đình đều không thể thiếu món sữa chua thơm ngon, hấp dẫn và cực kỳ tốt cho sức khỏe này. Tuy nhiên, đa phần đều chọn mua sữa chua công nghiệp đã được đóng hộp bán sẵn tại các siêu thị và cửa hàng hơn là sữa chua tự làm tại nhà. Như vậy, liệu sữa chua nhà làm và sữa chua công nghiệp thì loại nào tốt cho sức khỏe của chúng ta hơn? Nếu là một người yêu thích nấu ăn bạn sẽ chọn sữa nhà làm hay mua sữa chua công nghiệp bên ngoài. Sữa chua nhà làm đảm bảo về độ an toàn, chất lượng cũng như giá thành rẻ. <a href="#">Xem chi tiết</a></p>
+                    </div>
+                    <div class="videoLayout2">
+                        <video width="260px" height="260px" controls="controls"><source src="images/trangchu/yogurt.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+
+                <h2>Hướng Dẫn Làm Sữa Chua Không Đường</h2>
+                <div class="divLayout3">
+                    <div>   
+                        <h3>Nguyên liệu làm sữa chua không đường</h3>
+                        <ul>
+                            <li>1 lít sữa tươi không đường</li>
+                            <li>1 hộp sữa chua men cái không đường (bạn có thể mua sữa chua đóng hộp không đường như Vinamilk, TH True Milk,...)</li>
+                            <li>Dụng cụ nấu và ủ sữa chua</li>
+                        </ul>
+                    </div>  
+                    <div class="div-step">
+                        <h3>Các bước thực hiện</h3>
+                        <ol>
+                            <li>Cho sữa chua không đường vào nồi, đun nóng lên và khuấy đều, nhẹ tay theo 1 chiều. Tới khi sữa đạt khoảng 40 độ C thì tắt bếp. Bạn có thể dùng tay để kiểm tra, thấy sữa ấm vừa phải là được</li>
+                            <li>Đổ hộp sữa chua làm men cái vào và khuấy đều, múc vào hủ và đem đi ủ 6-8 tiếng</li>
+                            <li>Sau khi ủ xong, bạn có thể dùng 1 hủ sữa chua vừa ủ để ăn thử, nếu thấy đạt vị sữa chua rồi có thể bảo quản trong ngăn mát tủ lạnh và thưởng thức dần nhé</li>
+                        </ol>
+                    </div>  
+                </div>
+
+                <h2>Đặt Hàng Ngay</h2>
+                <div class="divLayout4">
+                    <div class="divOrder">
+                        <img width="100px" src="images/trangchu/order_1.png">
+                        <p>Gọi Điện</p>
+                    </div>
+                    <div class="divOrder">
+                        <img width="100px" src="images/trangchu/order_2.png">
+                        <p>Đặt Hàng</p>
+                    </div>
+                    <div class="divOrder">
+                        <img width="100px" src="images/trangchu/order_3.png">
+                        <p>Nhận Hàng</p>
+                    </div>
+                    <div class="divOrder"> 
+                        <img width="100px" src="images/trangchu/order_4.png">
+                        <p>Thanh Toán</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+    <footer>
+        <p>&copy 2021 Bản quyền thuộc về FreeezeVN. 
+            <a id="footerAwesome" href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a id="footerAwesome" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a id="footerAwesome" href="https://pinterest.com"><i class="fab fa-pinterest"></i></a>
+            <a href="#trangchu"><img class="top" src="images/top.png" alt="vedautrang"></a> 
+        </p>
+    </footer>
+</body>
+</html>
